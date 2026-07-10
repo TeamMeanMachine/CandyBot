@@ -1,12 +1,12 @@
-package org.team2471.bunnybots2021
+package org.team2471.candybot
 
 object Talons {
 }
 
-object Leds {
-    const val LED_PORT = 0
-    const val LED_LENGTH = 60
-}
+//object Leds {
+//    const val LED_PORT = 0
+//    const val LED_LENGTH = 60
+//}
 
 object Falcons {
     const val LEFT_DRIVE_ONE = 0
@@ -21,7 +21,7 @@ object Falcons {
 
 }
 object OtherCan {
-    const val PNEUMATICHUB = 5
+    const val PNEUMATIC_HUB = 5
 }
 
 object DriveTrainConstants {
