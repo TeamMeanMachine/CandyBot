@@ -14,7 +14,7 @@ wpi.vendor.loadFrom(project(":meanlib"))
 java {
 }
 
-def ROBOT_MAIN_CLASS = "frc.team2471.frc2026.Main"
+def ROBOT_MAIN_CLASS = "org.team2471.candybot.Main"
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO"s backing project DeployUtils.
@@ -173,27 +173,6 @@ wpi.java.configureTestTasks(test)
 // Configure string concat to always inline compile
 tasks.withType(JavaCompile).configureEach {
     options.compilerArgs.add "-XDstringConcat=inline"
-}
-
-tasks.register('printHubCurves', JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'frc.team2471.frc2026.tests.PrintHubCurves'
-
-    systemProperty 'java.library.path', "${projectDir}/build/jni/release"
-}
-
-tasks.register('printPassCurves', JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'frc.team2471.frc2026.tests.PrintPassCurves'
-
-    systemProperty 'java.library.path', "${projectDir}/build/jni/release"
-}
-
-tasks.register('printPassOverHubCurves', JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'frc.team2471.frc2026.tests.PrintPassOverHubCurves'
-
-    systemProperty 'java.library.path', "${projectDir}/build/jni/release"
 }
 
 repositories {
