@@ -19,10 +19,10 @@ object OI: SubsystemBase("OI") {
     const val OPERATOR_DEADBAND = 0.1
 
     val driveTranslationX: Double
-        get() = driverController.leftY.deadband(DRIVER_DEADBAND)
+        get() = driverController.leftX.deadband(DRIVER_DEADBAND)
 
     val driveTranslationY: Double
-        get() = driverController.leftX.deadband(DRIVER_DEADBAND)
+        get() = driverController.leftY.deadband(DRIVER_DEADBAND)
 
     val rawDriveTranslation: Translation2d
         get() {
@@ -76,8 +76,7 @@ object OI: SubsystemBase("OI") {
 
     init {
         println("inside OI init")
-
-//        Drive.defaultCommand = Drive.joystickDrive()
+        Drive.defaultCommand = Drive.joystickDrive()
 
 
         /**

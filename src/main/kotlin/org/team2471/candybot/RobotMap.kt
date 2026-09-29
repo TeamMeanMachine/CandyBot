@@ -1,14 +1,12 @@
 package org.team2471.candybot
 
-object Talons {
-}
 
 //object Leds {
 //    const val LED_PORT = 0
 //    const val LED_LENGTH = 60
 //}
 
-object Falcons {
+object Talons {
     const val LEFT_DRIVE_ONE = 0
     const val LEFT_DRIVE_TWO = 1
     const val RIGHT_DRIVE_ONE = 15

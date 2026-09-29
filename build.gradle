@@ -14,7 +14,7 @@ wpi.vendor.loadFrom(project(":meanlib"))
 java {
 }
 
-def ROBOT_MAIN_CLASS = "frc.team2471.frc2026.Main"
+def ROBOT_MAIN_CLASS = "org.team2471.candybot.Main"
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO"s backing project DeployUtils.
@@ -149,18 +149,6 @@ idea {
     module {
         downloadJavadoc = true
         downloadSources = true
-    }
-}
-
-tasks.matching { it.name == "build" }.all {
-    doFirst {
-        copyVendordeps()
-    }
-}
-
-tasks.matching { it.name == "deploy" }.all {
-    doFirst {
-        copyVendordeps()
     }
 }
 

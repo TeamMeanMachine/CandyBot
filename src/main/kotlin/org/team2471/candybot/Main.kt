@@ -180,7 +180,9 @@ object Robot : LoggedRobot() {
         LoopLogger.record("Robot periodic()")
     }
 
-    fun enabledInit() {}
+    fun enabledInit() {
+        Drive.brakeMode()
+    }
 
     /** Runs on alternate thread for loop times. Doesn't run sequential with rest of robot. Runs when robot is enabled */
     fun enabledInitAsync() {
