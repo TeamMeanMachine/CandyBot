@@ -15,7 +15,7 @@ object Talons {
 
  object Solenoids {
      const val YEETER = 0
-     const val LOADER = 1
+     const val FEEDER = 1
 
 }
 object OtherCan {

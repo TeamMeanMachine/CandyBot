@@ -4,8 +4,10 @@ import edu.wpi.first.math.filter.Debouncer
 import edu.wpi.first.math.geometry.Translation2d
 import edu.wpi.first.wpilibj.Alert
 import edu.wpi.first.wpilibj2.command.SubsystemBase
+import org.team2471.candybot.Yeeter.feeder
 import org.team2471.frc.lib.control.LoopLogger
 import org.team2471.frc.lib.control.MeanCommandXboxController
+import org.team2471.frc.lib.control.commands.finallyRun
 import org.team2471.frc.lib.math.deadband
 import org.team2471.frc.lib.math.normalize
 
@@ -77,6 +79,9 @@ object OI: SubsystemBase("OI") {
     init {
         println("inside OI init")
         Drive.defaultCommand = Drive.joystickDrive()
+        driverController.y().whileTrue(run { Yeeter.yeeterState = true }.finallyRun { Yeeter.yeeterState = false })
+        driverController.a().whileTrue(run { Yeeter.feederState = true }.finallyRun { Yeeter.feederState = false })
+
 
 
         /**
